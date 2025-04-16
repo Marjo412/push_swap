@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:56:43 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 15:57:51 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:16:39 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,30 @@ void	rotate_rr(t_stack **stack_a, t_stack **stack_b)
 	rotate(stack_b);
 	ft_printf("rr\n");
 }
+
+/*void	rotate(t_stack **stack)
+{
+	t_stack	*first;
+	t_stack	*last;
+
+	if (!stack || !*stack || !(*stack)->next) // 3 conditions pour verifier
+	qu'il y ait bien des elements dans la pile : si le ptr vers stack est
+	NULL = la pile n'existe pas, si la stack est vide elle pointe 
+	vers NULL = on fait rien, si la pile a un seul element il n'y a pas de
+	suivant = on ne peut pas faire de rotation.
+		return ; // si une des conditions est vraie, return sans rien faire
+	first = *stack; // pointe sur le 1er element de la pile
+	last = *stack; // point aussi le 1er au debut
+	while (last->next) // parcourt la pile pour trouver le dernier element
+		last = last->next; // avance au prochain element jusqu'au dernier
+	*stack = first->next; met a jour la tete de la pile vers l'element
+	suivant de first
+	(*stack)->prev = NULL; // on met a jour prev de ce nouvel element, le
+	nouveau 1er pour qu'il pointe vers NULL
+	first->next = NULL; // On détache le premier élément de la pile en le
+	déconnectant de son prochain élément.
+	first->prev = last; // On fait pointer le premier élément vers last,
+	ce qui signifie qu'il devient le dernier élément de la pile
+	last->next = first; // on relie le dernier élément(ancien dernier 
+	élément) au premier élément pour le faire revenir en fin de pile.
+}*/
