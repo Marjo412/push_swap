@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:24:37 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 14:33:59 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:55:18 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,14 @@ typedef struct s_stack
 	struct s_stack	*prev;
 	struct s_stack	*next;
 }	t_stack;
+
+/*moves*/
+void	swap(t_stack *stack);
+void	swap_a(t_stack *stack_a);
+void	swap_b(t_stack *stack_b);
+void	swap_ss(t_stack *stack_a, t_stack *stack_b);
+void	push(t_stack **dest, t_stack **src);
+void	push_a(t_stack **stack_a, t_stack **stack_b);
+void	push_b(t_stack **stack_a, t_stack **stack_b);
 
 #endif
