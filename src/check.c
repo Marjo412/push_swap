@@ -79,6 +79,11 @@ void	exit_error(t_stack **a, t_stack **b)
  found a dup current became the next element. the function return 0 if there is
  no dup.
  **is_sorted : check if the stack is already sorted, first check if the stack
- isn't empty and the next num exist 
+ isn't empty and the next num exist, if there is at least 2 nums the programme
+ can continue and when there is the last num the loop stops. the function
+ compare the num to the next numand if the next num is biggert its mean that
+ the stack isn't sorted so return 0. if the next value isn't bigger the
+ function continue with the next value. if the stack is sorted return 1 so
+ the programme can stop because the stack is already sorted.
  **exit_error : free a, free b if they exist, print the error message and
  quite the programme.*/
