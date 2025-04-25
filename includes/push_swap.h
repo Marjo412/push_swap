@@ -53,4 +53,24 @@ t_stack	*new_node(int value);
 void	append_node(t_stack **stack, t_stack *new);
 t_stack	*init_stack(int argc, char **argv);
 
+/*utils and check*/
+int	stack_size(t_stack *stack);
+t_stack	*get_min_node(t_stack *stack);
+void	free_stack(t_stack *stack);
+int	is_valid_number(char *str);
+int	has_duplicate(t_stack *stack);
+int	is_sorted(t_stack *stack);
+void	exit_error(t_stack **a, t_stack **b);
+
+/*sorts*/
+void	sort_stack(t_stack **a, t_stack **b);
+void	sort_2(t_stack **a);
+void	sort_3(t_stack **a);
+void	sort_4(t_stack **a, t_stack **b);
+void	sort_5(t_stack **a, t_stack **b);
+void	radix_sort(t_stack **a, t_stack **b);
+void	sort_by_bit(t_stack **a, t_stack **b, int bit, int size);
+int	get_max_bits(t_stack *stack);
+void	assign_index(t_stack *stack);
+
 #endif

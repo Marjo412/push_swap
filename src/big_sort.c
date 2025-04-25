@@ -48,18 +48,6 @@ void	sort_by_bit(t_stack **a, t_stack **b, int bit, int size)
 		push_a(a, b);
 }
 
-int	stack_size(t_stack *stack)
-{
-	int count;
-
-	count = 0;
-	while (stack)
-	{
-		stack = stack->next;
-		count++;
-	}
-	return (count);
-}
 
 int	get_max_bits(t_stack *stack)
 {
@@ -101,7 +89,7 @@ de sa valeur relative, en commencant par le 1er puis parcourt la pile,
 si le suiavnt est plus petit on incremente, puis on attribue l'index à ptr1
 
 2*int stack_size: compte combien il y a d'éléments dans la pile et return
-le compte final
+le compte final (utils.c)
 
 3*int get_max_bits: calcule le nb de bits pour le plus grand des index,
 compare chaque elements jusqu'a max et return le nb de bits

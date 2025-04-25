@@ -23,3 +23,5 @@ void	free_stack(t_stack *stack)
 		free(temp);
 	}
 }
+
+/**/
