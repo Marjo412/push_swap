@@ -64,3 +64,21 @@ t_stack	*init_stack(int argc, char **argv)
 	}
 	return (stack);
 }
+
+/***new_node : create a new node for the stack, allocate the memory and
+ check, stock the value, initialize the index with a default value (it will
+ be change later), the node is alone for now so there is nothing prev and
+ next and it return the ptr to the node.
+** append_node : attach a new node at the end of the stack, fisrt check
+ if the the ptr to the stack  and the new node aren't NULL (stop the 
+ function if there is true), if the stack is empty the new node beacome the
+ fisrt of the stack, else we loop until we found the last (next == NULL)
+ and we link the last to the new node. the last (next) point to the new and
+ the new point to the prev.
+** init_stack : build the stack while looping through the args, initialize
+the stack empty and the index at 1 (we don't want the progr name), we loop
+until i is smaller than args. Each value must be an int so we convert, we
+create a new node with this value (in new_node there is malloc) and check
+the memory allocation and we add the node at the end of the stack and pass
+to the next, when all the args are passed the function return the stack.
+*/

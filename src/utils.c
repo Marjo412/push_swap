@@ -41,8 +41,9 @@ t_stack	*get_min_node(t_stack *stack)
 	return (min);
 }
 
-/***find the node with the smaller index in the stack, utile in
- * small_sort.c, if the stack is empty, return NULL. We start with the fisrt
- * element (min = stack), we loop in the stack, if we find a node with smaller
- * index and we pass to the next index. when the stack is finish it return 
- * the smallest found (min)*/
+/***stack_size: define the size of the stack (ft_strlen)
+**get_min_node : find the node with the smaller index in the stack, utile in
+ small_sort.c, if the stack is empty, return NULL. We start with the fisrt
+ element (min = stack), we loop in the stack, if we find a node with smaller
+ index and we pass to the next index. when the stack is finish it return 
+ the smallest found (min)*/

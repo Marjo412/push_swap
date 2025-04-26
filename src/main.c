@@ -63,4 +63,4 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-/**/
+/*check_and_init : check if the args are valid, if */
