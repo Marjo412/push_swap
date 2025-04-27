@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 08:28:27 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/27 11:40:04 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/27 14:49:35 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int	is_valid_number(char *str)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	if (!str[i])
+	if (!isdigit(str[i]))
 		return (0);
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (0);
+	while (isdigit(str[i]))
 		i++;
-	}
+	while (isspace(str[i]))
+		i++;
+	if (str[i] != '\0')
+		return (0);
 	return (1);
 }
 

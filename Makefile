@@ -6,11 +6,11 @@
 #    By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/16 11:07:39 by mrosset           #+#    #+#              #
-#    Updated: 2025/04/27 11:12:48 by mrosset          ###   ########.fr        #
+#    Updated: 2025/04/27 13:46:37 by mrosset          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

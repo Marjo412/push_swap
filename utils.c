@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:44:47 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/27 09:22:08 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/27 15:05:01 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_stack	*get_min_node(t_stack *stack)
 	min = stack;
 	while (stack)
 	{
-		if (stack->index < min ->index)
+		if (stack->index < min->index)
 			min = stack;
 		stack = stack->next;
 	}
