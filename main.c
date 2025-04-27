@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:44:59 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/27 09:21:18 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/27 11:18:04 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	check_and_init(int argc, char **argv, t_stack **a)
 		if (!is_valid_number(argv[i]))
 			exit_error(a, NULL);
 		nums = ft_atoi(argv[i]);
-		if (nums > INT_MAX || nums < INT_MIN)
+		if (nums < INT_MAX || nums > INT_MIN)
 			exit_error(a, NULL);
 		append_node(a, new_node(nums));
 		i++;

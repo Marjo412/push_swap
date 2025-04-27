@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:24:37 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/27 09:22:59 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/27 11:39:26 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <ctype.h>
 
 # include "libft.h"
 # include "ft_printf.h"
