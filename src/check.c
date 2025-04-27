@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 08:28:27 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/25 08:28:27 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/27 09:24:00 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	is_valid_number(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
@@ -29,6 +29,7 @@ int	is_valid_number(char *str)
 	}
 	return (1);
 }
+
 int	has_duplicate(t_stack *stack)
 {
 	t_stack	*current;

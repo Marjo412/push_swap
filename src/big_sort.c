@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   big_sort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:30:58 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/17 17:30:58 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/27 09:23:49 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap."
+#include "push_swap.h"
 
 void	radix_sort(t_stack **a, t_stack **b)
 {
-	int size;
-	int max_bits;
-	int bit;
+	int	size;
+	int	max_bits;
+	int	bit;
 
 	assign_index(*a);
 	size = stack_size(*a);
@@ -31,8 +31,8 @@ void	radix_sort(t_stack **a, t_stack **b)
 
 void	sort_by_bit(t_stack **a, t_stack **b, int bit, int size)
 {
-	int i;
-	int num;
+	int	i;
+	int	num;
 
 	i = 0;
 	while (i < size)
@@ -48,11 +48,10 @@ void	sort_by_bit(t_stack **a, t_stack **b, int bit, int size)
 		push_a(a, b);
 }
 
-
 int	get_max_bits(t_stack *stack)
 {
-	int max;
-	int bits;
+	int	max;
+	int	bits;
 
 	max = stack_size(stack);
 	bits = 0;
@@ -63,9 +62,9 @@ int	get_max_bits(t_stack *stack)
 
 void	assign_index(t_stack *stack)
 {
-	t_stack *ptr1;
-	t_stack *ptr2;
-	int index;
+	t_stack	*ptr1;
+	t_stack	*ptr2;
+	int		index;
 
 	ptr1 = stack;
 	while (ptr1)

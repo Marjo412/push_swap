@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:44:59 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 17:08:44 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/27 09:21:18 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	check_and_init(int argc, char **argv, t_stack **a)
 	}
 	if (has_duplicate(*a))
 		exit_error(a, NULL);
-		if (is_sorted(*a))
+	if (is_sorted(*a))
 	{
 		free_stack(*a);
 		exit(0);

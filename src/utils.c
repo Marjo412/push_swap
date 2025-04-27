@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:44:47 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/17 18:44:47 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/27 09:22:08 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	stack_size(t_stack *stack)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (stack)
@@ -32,7 +32,7 @@ t_stack	*get_min_node(t_stack *stack)
 	if (!stack)
 		return (NULL);
 	min = stack;
-	while (stack))
+	while (stack)
 	{
 		if (stack->index < min ->index)
 			min = stack;

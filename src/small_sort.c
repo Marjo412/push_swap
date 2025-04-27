@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:31:31 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/17 17:31:31 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/27 09:26:26 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	sort_stack(t_stack **a, t_stack **b)
 {
-	int	size = stack_size(*a);
+	int	size;
 
+	size = stack_size(*a);
 	if (size == 2)
 		sort_2(a);
 	else if (size == 3)
@@ -36,10 +37,13 @@ void	sort_2(t_stack **a)
 
 void	sort_3(t_stack **a)
 {
-	int	first = (*a)->value;
-	int	second = (*a)->next->value;
-	int	third = (*a)->next->next->value;
+	int	first;
+	int	second;
+	int	third;
 
+	first = (*a)->value;
+	second = (*a)->next->value;
+	third = (*a)->next->next->value;
 	if (first > second && second < third && first < third)
 		swap_a(*a);
 	else if (first > second && second > third)
