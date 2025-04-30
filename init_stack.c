@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:26:11 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 17:43:12 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 12:37:48 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,18 @@ t_stack	*init_stack(int argc, char **argv)
 	t_stack	*stack;
 	t_stack	*node;
 	int		i;
-	int		value;
+	long	value;
 
 	stack = NULL;
 	i = 1;
 	while (i < argc)
 	{
-		value = ft_atoi(argv[i]);
-		node = new_node(value);
+		value = ft_atol(argv[i]);
+		if (value < INT_MIN || value > INT_MAX)
+			exit_error(&stack, NULL);
+		node = new_node((int)value);
 		if (!node)
-			return (NULL);
+			exit_error(&stack, NULL);
 		append_node(&stack, node);
 		i++;
 	}
