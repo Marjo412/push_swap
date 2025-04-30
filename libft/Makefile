@@ -6,16 +6,16 @@
 #    By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/10 10:28:06 by mrosset           #+#    #+#              #
-#    Updated: 2025/04/30 12:15:13 by mrosset          ###   ########.fr        #
+#    Updated: 2025/04/30 13:57:52 by mrosset          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a #nom du programme a créer
+NAME = libft.a
 
-CC = cc #définit le compilateur à utiliser
-CFLAGS = -Wall -Wextra -Werror -I. #flags utilisé pour compiler, I. ajoute le repertoire .h
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I.
 
-SRCS = ft_atoi.c \ #liste des sources à compiler
+SRCS = ft_atoi.c \
 	   ft_atol.c \
 	   ft_bzero.c \
 	   ft_calloc.c \
@@ -51,29 +51,22 @@ SRCS = ft_atoi.c \ #liste des sources à compiler
 	   ft_tolower.c \
 	   ft_toupper.c \
 
-OBJS = $(SRCS:.c=.o) #liste des objets à générer à partir des sources
+OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS) #la cible dépend des objets à créer, peut le faire seulement si objs sont dispos 
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c libft.h #règle de compilation pour chaque fichier .o, dépendant de son .c correspondant et de libft.h.
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME) #cible à exécuter en lancant 'make'
+all: $(NAME)
 
-clean: #supprime tous les fichiers .o en lancant 'clean'
+clean:
 	rm -rf $(OBJS)
 
-fclean: clean #supprime les objets dans 'clean' ainsi que l'archive, pour recompiler depuis 0.
+fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all #Exécute fclean puis all, soit une recompilation complète.
+re: fclean all
 
-.PHONY: all clean fclean re #Indique que les cibles ne correspondent pas à des fichiers mais à des actions.
-#Cela empêche les conflits si des fichiers portant ces noms existent.
-
-#ar : utilitaire pour créer et manipuler les archives
-#rcs : 'r' remplace les fichiers dans l'archive, 'c'crée l'archive, 's' ajoute l'index.
-#$(CC) $(CFLAGS) -c $< -o $@ : Compilation de chaque fichier .c en un fichier objet .o
-#$< : Le premier prérequis (ici, le fichier .c correspondant)
-#$@ : Le nom de la cible (.o), correspondant à % dans le modèle
+.PHONY: all clean fclean re
