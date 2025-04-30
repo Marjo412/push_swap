@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:56:43 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 16:16:39 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 11:45:34 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,9 @@ void	rotate_rr(t_stack **stack_a, t_stack **stack_b)
 	ce qui signifie qu'il devient le dernier élément de la pile
 	last->next = first; // on relie le dernier élément(ancien dernier 
 	élément) au premier élément pour le faire revenir en fin de pile.
-}*/
+}
+ra (rotate a) : Décale d’une position vers le haut tous les élements de la pile a.
+	Le premier élément devient le dernier.
+rb (rotate b) : Décale d’une position vers le haut tous les élements de la pile b.
+	Le premier élément devient le dernier.
+rr : ra et rb en même temps*/

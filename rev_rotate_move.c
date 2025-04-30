@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:56:35 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 16:43:58 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 11:45:59 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,9 @@ void	reverse_rotate_rr(t_stack **stack_a, t_stack **stack_b)
 	last->prev = NULL; // become the new first
 	(*stack)->prev = last; // the old first point back to the new one
 	*stack = last; // stack is update to point to the new fist (last)
-}*/
+}
+rra (reverse rotate a) : Décale d’une position vers le bas tous les élements de
+	la pile a. Le dernier élément devient le premier.
+rrb (reverse rotate b) : Décale d’une position vers le bas tous les élements de
+	la pile b. Le dernier élément devient le premier.
+rrr : rra et rrb en même temps.*/

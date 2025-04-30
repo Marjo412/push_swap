@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:56:31 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 15:29:41 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 11:45:05 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,8 @@ void	push_b(t_stack **stack_a, t_stack **stack_b)
 	*stack_a = temp; // the new element become the fisrt element of
 	the stack a
 	ft_printf("pa\n"); // display the opration
-}*/
+}
+pa (push a) : Prend le premier élément au sommet de b et le met sur a.
+	Ne fait rien si b est vide.
+pb (push b) : Prend le premier élément au sommet de a et le met sur b.
+	Ne fait rien si a est vide.*/

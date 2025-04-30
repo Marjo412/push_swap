@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:56:39 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/16 14:19:06 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 11:44:33 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,9 @@ void	swap_ss(t_stack *stack_a, t_stack *stack_b)
 	element with the second element
 	stack->next->value = temp; // we end the change by put in the second
 	element int the fisrt one that we saved.
-}*/
+}
+sa (swap a) : Intervertit les 2 premiers éléments au sommet de la pile a.
+	Ne fait rien s’il n’y en a qu’un ou aucun.
+sb (swap b ) : Intervertit les 2 premiers éléments au sommet de la pile b.
+	Ne fait rien s’il n’y en a qu’un ou aucun.
+ss : sa et sb en même temps.*/
