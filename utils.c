@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:44:47 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/27 15:05:01 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 18:35:31 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,15 @@ int	stack_size(t_stack *stack)
 	return (count);
 }
 
-t_stack	*get_min_node(t_stack *stack)
+int	get_min_node(t_stack *stack)
 {
-	t_stack	*min;
+	int	min;
 
-	if (!stack)
-		return (NULL);
-	min = stack;
+	min = stack->value;
 	while (stack)
 	{
-		if (stack->index < min->index)
-			min = stack;
+		if (stack->value < min)
+			min = stack->value;
 		stack = stack->next;
 	}
 	return (min);

@@ -6,23 +6,56 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:44:59 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/27 14:57:33 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 17:39:04 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	free_input(char **input, int count)
+{
+	int	i;
+
+	i = 0;
+	while (i < count)
+		free(input[i++]);
+	free(input);
+}
+
+char	**input_init(int argc,char **argv, int *count, int *nf)
+{
+	char **input;
+	
+	if (argc == 2)
+	{
+		input = ft_split(argv[1], ' ', count);
+		*nf = 1;
+	}
+	else
+	{
+		input = &argv[1];
+		*count = argc - 1;
+	}
+	return (input);
+}
+
 void	check_and_init(int argc, char **argv, t_stack **a)
 {
 	int	i;
 	int	nums;
+	int	count;
+	char **input;
+	int		nf;
 
-	i = 1;
-	while (i < argc)
+	count = 0;
+	nf = 0;
+	input = input_init(argc, argv, &count, &nf);
+	i = 0;
+	while (i < count)
 	{
-		if (!is_valid_number(argv[i]))
+		if (!is_valid_number(input[i]))
 			exit_error(a, NULL);
-		nums = ft_atoi(argv[i]);
+		nums = ft_atoi(input[i]);
 		append_node(a, new_node(nums));
 		i++;
 	}
@@ -33,6 +66,8 @@ void	check_and_init(int argc, char **argv, t_stack **a)
 		free_stack(*a);
 		exit(0);
 	}
+	if (nf)
+		free_input(input, count);
 }
 
 int	main(int argc, char **argv)
@@ -40,6 +75,7 @@ int	main(int argc, char **argv)
 	t_stack	*a;
 	t_stack	*b;
 	int		size;
+	
 
 	a = NULL;
 	b = NULL;

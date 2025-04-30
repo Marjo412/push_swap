@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:31:31 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/27 09:26:26 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 18:36:28 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,10 @@ void	sort_3(t_stack **a)
 
 void	sort_4(t_stack **a, t_stack **b)
 {
-	t_stack	*min_node;
+	int	min_node;
 
 	min_node = get_min_node(*a);
-	while (*a != min_node)
+	while ((*a)->value != min_node)
 		rotate_a(a);
 	push_b(a, b);
 	sort_3(a);
@@ -76,14 +76,14 @@ void	sort_4(t_stack **a, t_stack **b)
 
 void	sort_5(t_stack **a, t_stack **b)
 {
-	t_stack	*min_node;
+	int	min_node;
 
 	min_node = get_min_node(*a);
-	while (*a != min_node)
+	while ((*a)->value != min_node)
 		rotate_a(a);
 	push_b(a, b);
 	min_node = get_min_node(*a);
-	while (*a != min_node)
+	while ((*a)->value != min_node)
 		rotate_a(a);
 	push_b(a, b);
 	sort_3(a);

@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 11:21:24 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/30 12:06:43 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 17:17:06 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
-char			**ft_split(char const *s, char c);
+char			**ft_split(char const *s, char c, int *count);
 char			*ft_strchr(const char *src, int c);
 char			*ft_strdup(char *src);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));

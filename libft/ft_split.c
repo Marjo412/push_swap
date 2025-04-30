@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 09:24:26 by mrosset           #+#    #+#             */
-/*   Updated: 2024/10/24 10:12:52 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 17:20:08 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*ft_dup(const char *str, int start, int finish)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c, int *count)
 {	
 	size_t		i;
 	size_t		j;
@@ -71,6 +71,7 @@ char	**ft_split(char const *s, char c)
 			index = -1;
 		}
 		i++;
+		*count = j;
 	}
 	dest[j] = NULL;
 	return (dest);

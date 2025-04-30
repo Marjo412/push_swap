@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:24:37 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/30 16:10:37 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 18:23:57 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ t_stack	*init_stack(int argc, char **argv);
 
 /*utils and check*/
 int		stack_size(t_stack *stack);
-t_stack	*get_min_node(t_stack *stack);
+int		get_min_node(t_stack *stack);
 void	free_stack(t_stack *stack);
 int		is_valid_number(char *str);
 int		has_duplicate(t_stack *stack);
