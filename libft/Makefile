@@ -6,16 +6,17 @@
 #    By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/10 10:28:06 by mrosset           #+#    #+#              #
-#    Updated: 2025/02/09 12:16:10 by mrosset          ###   ########.fr        #
+#    Updated: 2025/04/30 12:17:21 by mrosset          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc 
-CFLAGS = -Wall -Wextra -Werror -I. 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I.
 
 SRCS = ft_atoi.c \
+	   ft_atol.c \
 	   ft_bzero.c \
 	   ft_calloc.c \
 	   ft_isalnum.c \
@@ -52,7 +53,7 @@ SRCS = ft_atoi.c \
 
 OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS) 
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c libft.h
@@ -69,9 +70,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-#ar : utilitaire pour créer et manipuler les archives
-#rcs : 'r' remplace les fichiers dans l'archive, 'c'crée l'archive, 's' ajoute l'index.
-#$(CC) $(CFLAGS) -c $< -o $@ : Compilation de chaque fichier .c en un fichier objet .o
-#$< : Le premier prérequis (ici, le fichier .c correspondant)
-#$@ : Le nom de la cible (.o), correspondant à % dans le modèle

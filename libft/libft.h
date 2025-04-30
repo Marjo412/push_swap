@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 11:21:24 by mrosset           #+#    #+#             */
-/*   Updated: 2025/02/09 13:20:58 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 12:17:43 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 # include <stdlib.h>
 # include <stddef.h>
 
+
 int				ft_atoi(const char *str);
+long			ft_atol(const char *str);
 void			ft_bzero(void *src, size_t n);
 void			*ft_calloc(size_t nb, size_t len);
 int				ft_isalnum(int c);
