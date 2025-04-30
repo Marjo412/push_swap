@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:56:43 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/30 11:45:34 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 13:53:14 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void	rotate_rr(t_stack **stack_a, t_stack **stack_b)
 	ft_printf("rr\n");
 }
 
-/*void	rotate(t_stack **stack)
+/*
+**void rotate(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*last;
