@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:26:11 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/30 12:37:48 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:43:18 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,25 @@ void	append_node(t_stack **stack, t_stack *new)
 	temp->next = new;
 	new->prev = temp;
 }
+
+/*void	quotes_and_spaces(char *str)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		if (str[i] == "")
+		{
+			str[j] = str[i];
+			j++;
+		}
+		i++;
+	}
+	str[j] = '\0';
+}*/
 
 t_stack	*init_stack(int argc, char **argv)
 {

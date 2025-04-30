@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:24:37 by mrosset           #+#    #+#             */
-/*   Updated: 2025/04/27 11:39:26 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:38:29 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	reverse_rotate_rr(t_stack **stack_a, t_stack **stack_b);
 /*init stack*/
 t_stack	*new_node(int value);
 void	append_node(t_stack **stack, t_stack *new);
+void	quotes_and_spaces(char *str);
 t_stack	*init_stack(int argc, char **argv);
 
 /*utils and check*/
