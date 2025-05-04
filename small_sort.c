@@ -6,7 +6,7 @@
 /*   By: mrosset <mrosset@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:31:31 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/30 18:36:28 by mrosset          ###   ########.fr       */
+/*   Updated: 2025/05/04 12:00:45 by mrosset          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,3 +90,6 @@ void	sort_5(t_stack **a, t_stack **b)
 	push_a(a, b);
 	push_a(a, b);
 }
+/*
+L'algorythme radix sort n'est pas adapte pour trier peu de chiffre
+	donc de 2 a 5 chiffre il faut le faire manuellement.*/
